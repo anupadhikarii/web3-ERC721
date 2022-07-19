@@ -20,7 +20,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  * @type import('hardhat/config').HardhatUserConfig
  */
  module.exports = {
-  solidity: "^0.8.9",
+  solidity: "0.8.9",
   networks: {
    rinkeby: {
      url: process.env.REACT_APP_RINKEBE_RPC_URL, //Infura url with projectId

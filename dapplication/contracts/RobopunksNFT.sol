@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0
-pragma solidity ^0.8.9;
+pragma solidity 0.8.9;
 
 
-import "../node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "../node_modules/@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+// https://rinkeby.etherscan.io/address/0xF45C569e3B46E7179d35B41231CAc05B5f8EfDB0#code
 
-//0xA33ac1F1769c68Ae461C847F68C655b89eD18f96
 contract RobopunksNFT is ERC721,Ownable{
 
     uint256 public mintPrice;
@@ -32,7 +32,7 @@ contract RobopunksNFT is ERC721,Ownable{
     }
 
     function setBaseTokenUri(string calldata baseTokenUri_) external onlyOwner{
-        baseTokenUri  = baseTokenUri_;
+        baseTokenUri = baseTokenUri_;
     }
 
     function tokenURI(uint tokenId_) public view override returns(string memory){
